@@ -8,6 +8,8 @@
 volatile static int started = 0;
 
 void main () {
-
-
+    consoleinit();
+    printfinit();
+    printf("a");
+	while (1);
 }
