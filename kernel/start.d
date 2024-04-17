@@ -1,2 +1,3 @@
-kernel/start.o: kernel/start.c kernel/types.h kernel/param.h \
- kernel/memlayout.h kernel/riscv.h kernel/defs.h
+kernel/start.o: kernel/start.c kernel/include/param.h \
+ kernel/include/riscv.h kernel/include/types.h kernel/include/defs.h \
+ kernel/include/memlayout.h

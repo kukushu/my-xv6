@@ -1,2 +1,2 @@
-kernel/console.o: kernel/console.c kernel/types.h kernel/spinlock.h \
- kernel/riscv.h kernel/defs.h kernel/file.h
+kernel/console.o: kernel/console.c kernel/include/spinlock.h \
+ kernel/include/types.h kernel/include/riscv.h kernel/include/defs.h

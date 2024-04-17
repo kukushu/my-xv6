@@ -9,9 +9,8 @@
         # kernel.ld causes this code to start at 
         # a page boundary.
         #
-
-#include "memlayout.h"
-#include "riscv.h"
+#include "include/riscv.h"
+#include "include/memlayout.h"
 
 .section trampsec
 .globl trampoline

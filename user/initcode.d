@@ -1,1 +1,1 @@
-user/initcode.o: user/initcode.S kernel/syscall.h
+user/initcode.o: user/initcode.S kernel/include/syscall.h

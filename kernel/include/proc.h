@@ -1,5 +1,11 @@
-// Saved registers for kernel context switches.
+#ifndef __PROC_H
+#define __PROC_H
 
+#include "types.h"
+#include "param.h"
+#include "riscv.h"
+
+// Saved registers for kernel context switches.
 struct context {
   uint64 ra;
   uint64 sp;
@@ -107,3 +113,5 @@ struct proc {
   char name[16];               // Process name (debugging)
 };
 
+
+#endif

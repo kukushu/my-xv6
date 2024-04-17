@@ -1,13 +1,14 @@
-#include "types.h"
-#include "param.h"
-#include "memlayout.h"
-#include "riscv.h"
-#include "spinlock.h"
-#include "proc.h"
-#include "defs.h"
+#include "include/riscv.h"
+#include "include/defs.h"
+
+
+extern void kernelvec (void);
 void kerneltrap (void);
 void machine_vec (void);
 
+void trapinithart (void) {
+  w_stvec((uint64)kernelvec);
+}
 
 void kerneltrap() {
   printf("kerneltrap");

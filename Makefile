@@ -68,7 +68,7 @@ clean:
 	mkfs/mkfs \
         $U/usys.S \
 	$(UPROGS)
-mkfs/mkfs: mkfs/mkfs.c $K/fs.h $K/param.h
+mkfs/mkfs: mkfs/mkfs.c $K/include/fs.h $K/include/param.h
 	gcc -Werror -Wall -I. -o mkfs/mkfs mkfs/mkfs.c
 
 fs.img: mkfs/mkfs $(UPROGS)

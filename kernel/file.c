@@ -1,4 +1,4 @@
-#include "file.h"
-#include "param.h"
+#include "include/file.h"
+#include "include/param.h"
 
 struct devsw devsw[NDEV];

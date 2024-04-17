@@ -1,8 +1,7 @@
-#include "types.h"
-#include "spinlock.h"
-#include "riscv.h"
-#include "defs.h"
-#include "file.h"
+#include "include/spinlock.h"
+#include "include/riscv.h"
+#include "include/defs.h"
+
 
 #define BACKSPACE 0x100
 #define C(x) ((x)-'@')

@@ -1,3 +1,8 @@
+#ifndef __STAT_H
+#define __STAT_H
+
+#include "types.h"
+
 #define T_DIR     1   // Directory
 #define T_FILE    2   // File
 #define T_DEVICE  3   // Device
@@ -10,3 +15,4 @@ struct stat {
   uint64 size; // Size of file in bytes
 };
 
+#endif

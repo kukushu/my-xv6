@@ -1,4 +1,12 @@
+#ifndef __RISCV_H
+#define __RISCV_H
+
 #ifndef __ASSEMBLER__
+
+#include "types.h"
+
+
+
 
 // which hart (core) is this?
 static inline uint64
@@ -231,6 +239,13 @@ r_scause()
   asm volatile("csrr %0, scause" : "=r" (x) );
   return x;
 }
+static inline uint64
+r_mcause()
+{
+  uint64 x;
+  asm volatile("csrr %0, mcause" : "=r" (x) );
+  return x;
+}
 
 // Supervisor Trap Value
 static inline uint64
@@ -330,7 +345,7 @@ sfence_vma()
 typedef uint64 pte_t;
 typedef uint64 *pagetable_t; // 512 PTEs
 
-#endif // __ASSEMBLER__
+#endif
 
 #define PGSIZE 4096 // bytes per page
 #define PGSHIFT 12  // bits of offset within a page
@@ -362,3 +377,4 @@ typedef uint64 *pagetable_t; // 512 PTEs
 // that have the high bit set.
 #define MAXVA (1L << (9 + 9 + 9 + 12 - 1))
 
+#endif
