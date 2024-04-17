@@ -10,6 +10,6 @@ volatile static int started = 0;
 void main () {
     consoleinit();
     printfinit();
-    printf("a");
+    //printf("a");
 	while (1);
 }
